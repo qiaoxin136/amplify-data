@@ -2,12 +2,12 @@ import type { Schema } from "../../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
 import { useEffect, useState } from "react";
 
-type MeetingPlaceType = Schema['MeetingPlace']['type']
+type MeetingPlaceType = Schema['Place']['type']
 
 
 export function MeetingPlaces() {
 
-    const placesClient = generateClient<Schema>().models.MeetingPlace
+    const placesClient = generateClient<Schema>().models.Place
 
     const [meetingPlaces, setMeetingPlaces] = useState<Array<MeetingPlaceType>>([])
 

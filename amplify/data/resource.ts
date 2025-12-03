@@ -1,7 +1,7 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
 
 const schema = a.schema({
-  MeetingPlace: a
+  Place: a
     .model({
       location: a.string().required(),
       rating: a.integer()
